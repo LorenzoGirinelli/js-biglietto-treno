@@ -9,7 +9,22 @@
 const nkm = prompt(`Quanti chilometri vuoi percorrere?`);
 console.log(nkm);
 const useretà = prompt(`Digita la tua età`);
-console.log(useretà)
+console.log(useretà);
 
 // LOGICA 
 let price = nkm * 0.21;
+console.log(price.toFixed(2) );
+
+// CALCOLO SCONTI
+if( useretà < 18 ) {
+    let discount = (price * 20) / 100;
+    console.log(discount);
+    price = (price - discount);
+    console.log(price)
+}
+if( useretà > 65 ) {
+    let discount = (price * 40) / 100;
+    console.log(discount);
+    price = (price - discount);
+    console.log(price)
+}
