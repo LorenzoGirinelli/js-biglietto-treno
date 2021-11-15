@@ -21,11 +21,13 @@ if( usereta < 18 ) {
     console.log(discount);
     price = (price - discount);
     console.log(price)
-} else { 
-    if( usereta > 65 ) {
-        let discount = (price * 40) / 100;
-        console.log(discount);
-        price = (price - discount);
-        console.log(price)
-    }
+} else if ( usereta > 65 ) {
+    let discount = (price * 40) / 100;
+    console.log(discount);
+    price = (price - discount);
+    console.log(price)
 }
+
+// OUTPUT
+let userMessage = `il prezzo del biglietto è di ` + price.toFixed(2)
+alert(userMessage);
